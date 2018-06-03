@@ -1,0 +1,57 @@
+{
+    "v": "4.0",
+    "workspace": {
+      "commands": [],
+      "projects": [
+        {
+          "name": "cheDemo",
+          "attributes": {
+            "languageVersion": [
+              "1.6"
+            ],
+            "language": [
+              "java"
+            ]
+          },
+          "type": "maven",
+          "source": {
+            "location":"git@github.com:gorkem/cheDemo.git",
+            "type": "git",
+            "parameters": {
+              "branch": "master"
+            }
+          },
+          "modules": [],
+          "path": "/cheDemo",
+          "mixins": [
+            "git"
+          ],
+          "problems": []
+        }
+      ],
+      "defaultEnv": "wss",
+      "name": "devnationDemo",
+      "attributes": {},
+      "environments": {
+        "wss": {
+          "machines": {
+            "dev-machine": {
+              "installers": [
+                "org.eclipse.che.terminal",
+                "org.eclipse.che.exec",
+                "org.eclipse.che.ws-agent"
+              ],
+              "servers": {},
+              "attributes": {
+                "memoryLimitBytes": "2147483648"
+              }
+            }
+          },
+          "recipe": {
+            "content": "eclipse/centos_jdk8",
+            "type": "dockerimage"
+          }
+        }
+      }
+    }
+  }
