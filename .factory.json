@@ -5,27 +5,16 @@
       "projects": [
         {
           "name": "cheDemo",
-          "attributes": {
-            "languageVersion": [
-              "1.6"
-            ],
-            "language": [
-              "java"
-            ]
-          },
+          "attributes": { },
           "type": "maven",
           "source": {
             "location":"git@github.com:gorkem/cheDemo.git",
             "type": "git",
-            "parameters": {
-              "branch": "master"
-            }
+            "parameters": {}
           },
           "modules": [],
           "path": "/cheDemo",
-          "mixins": [
-            "git"
-          ],
+          "mixins": [],
           "problems": []
         }
       ],
@@ -41,14 +30,20 @@
                 "org.eclipse.che.exec",
                 "org.eclipse.che.ws-agent"
               ],
-              "servers": {},
+              "servers": {
+                "jhipsterDev": {
+                    "attributes": {},
+                    "port": "8080",
+                    "protocol": "http"
+                  }
+              },
               "attributes": {
                 "memoryLimitBytes": "2147483648"
               }
             }
           },
           "recipe": {
-            "content": "eclipse/node",
+            "content": "eclipse/ubuntu_jdk8",
             "type": "dockerimage"
           }
         }
