@@ -48,7 +48,7 @@
             }
           },
           "recipe": {
-            "content": "eclipse/centos_jdk8",
+            "content": "eclipse/node",
             "type": "dockerimage"
           }
         }
