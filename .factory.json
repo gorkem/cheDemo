@@ -5,7 +5,11 @@
       "projects": [
         {
           "name": "cheDemo",
-          "attributes": { },
+          "attributes": {
+            "commands": [
+                "{\"commandLine\":\"cd ${current.project.path}\\n./mvnw\", \"name\":\"Run Hipster\", \"attributes\":{\"goal\":\"Run\", \"previewUrl\":\"${server.jhipsterDev}\"}, \"type\":\"mvn\"}"
+              ]
+           },
           "type": "maven",
           "source": {
             "location":"git@github.com:gorkem/cheDemo.git",
@@ -43,7 +47,7 @@
             }
           },
           "recipe": {
-            "content": "eclipse/ubuntu_jdk8",
+            "content": "gercan/jhipster",
             "type": "dockerimage"
           }
         }
